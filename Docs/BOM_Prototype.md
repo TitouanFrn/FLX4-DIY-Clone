@@ -29,5 +29,25 @@ L'objectif de cette phase est de tester la latence MIDI avec les LEDs SPI, le mu
 | **Câbles Dupont** | ~40 | Mâle/Mâle pour la plaque, et Mâle/Femelle pour relier les modules. |
 | **Câble Micro-USB / USB-C** | 1 | Pour relier l'Arduino au PC (doit supporter le transfert de données, pas juste la charge). |
 
+
+
+
+# 📋 BOM (Bill of Materials) : Prototype Électronique
+
+Liste complète des composants nécessaires pour le prototypage virtuel et physique du contrôleur DJ.
+
+| 🔢 Quantité | 🧩 Composant | 📄 Description |
+| :---: | :--- | :--- |
+| **x1** | 🧠 Microcontrôleur | **Arduino Pro Micro** - ATmega32U4 - 5V/16MHz - USB Type C (Crucial pour le MIDI) |
+| **x1** | 🔀 Multiplexeur | **CD74HC4067** - Breakout board 16 canaux (Pour lire tous les potentiomètres) |
+| **x1** | 👆 Capteur Capacitif | **MPR121** - Module I2C (Pour la détection du toucher sur le Jog Wheel) |
+| **x8** | 🔘 Boutons Poussoirs | **B3F-4055** - 12x12x7.3mm (Pads de performance tactiles) |
+| **x8** | 🛑 Diodes | **1N4148** - Diodes de commutation (Anti-ghosting pour la matrice de boutons) |
+| **x4** | 🎛️ Potentiomètres Rotatifs | **R0902N** - B103 - 10kΩ - Axe en D de 23mm (Pour les EQ High, Mid, Low, Trim) |
+| **x3** | 🎚️ Potentiomètres Linéaires | **Faders 60mm** - B103 - 10kΩ - Tige de 15mm (Pour le volume des platines et le crossfader) |
+| **x2** | 🔄 Encodeurs Rotatifs | **EC11** - Axe en D de 15mm - (Pour la navigation et les Jog Wheels basiques) |
+| **x1** | 💡 Ruban LED | **APA102 / SK9822** - Bande de 10 à 16 LEDs (Communication SPI, zéro latence) |
+| **x4** | ➖ Résistances | 1/4W - 10kΩ (Résistances de tirage / pull-up) |
+| **Lot** | 🔌 Câbles | 24 AWG - Rouge (5V), Noir (GND), Bleu, Vert, Jaune (Data) |
 ---
 *Note : Cette liste est volontairement réduite au strict nécessaire pour valider le code et les protocoles de communication. La nomenclature complète (avec les encodeurs optiques industriels, les roulements 608ZZ, etc.) sera établie lors de la Phase 4.*
